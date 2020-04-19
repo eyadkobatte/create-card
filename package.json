@@ -1,5 +1,5 @@
 {
-  "name": "create-card",
+  "name": "create-personal-card",
   "version": "0.0.1",
   "description": "Create a card that displays information in terminal output",
   "main": "index.js",

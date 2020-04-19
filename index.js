@@ -158,7 +158,7 @@ const init = async () => {
     const handleAnswers = await askHandleQuestions(baseAnswers);
     // console.log({ handleAnswers });
     await createProject();
-    fs.copyFileSync('./card.js', './personal-card/index.js');
+    fs.copyFileSync('card.js', './personal-card/index.js');
     const results = await updateCardFunction({
       FULL_NAME: baseAnswers.name,
       ALIAS: baseAnswers.alias,

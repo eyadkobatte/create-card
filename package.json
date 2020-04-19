@@ -3,7 +3,9 @@
   "version": "0.0.2",
   "description": "Create a card that displays information in terminal output",
   "main": "index.js",
-  "bin": "index.js",
+  "bin": {
+    "create-personal-card": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +19,8 @@
   "author": "Eyad Kobatte (eyadkobatte.com)",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "^7.1.0"
+    "inquirer": "^7.1.0",
+    "replace-in-file": "^5.0.2"
   },
   "devDependencies": {
     "eslint": "^6.8.0",

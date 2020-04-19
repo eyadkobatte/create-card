@@ -8,7 +8,12 @@ const init = async () => {
     {
       type: 'input',
       name: 'name',
-      message: 'What name do you go by?',
+      message: 'What is your full name?',
+    },
+    {
+      type: 'input',
+      name: 'alias',
+      message: 'What name do you go by on the interwebs?',
     },
     {
       type: 'checkbox',
@@ -31,6 +36,7 @@ const init = async () => {
   const handleQuestions = handles.map((handle) => {
     let message = 'Whats your handle?';
     let filter = (value) => value;
+    let defaultValue = null;
     switch (handle) {
       case 'Blog':
         message = 'What blog do you own?';
@@ -38,14 +44,17 @@ const init = async () => {
       case 'GitHub':
         message = 'What is your GitHub Handle?';
         filter = (value) => `https://github.com/${value}`;
+        defaultValue = answers.alias;
         break;
       case 'LinkedIn':
         message = 'What is your LinkedIn Handle?';
         filter = (value) => `https://www.linkedin.com/in/${value}`;
+        defaultValue = answers.alias;
         break;
       case 'Twitter':
         message = 'What is your Twitter Handle?';
         filter = (value) => `https://twitter.com/${value}`;
+        defaultValue = answers.alias;
         break;
       case 'Website':
         message = 'What is your website?';
@@ -58,6 +67,7 @@ const init = async () => {
       name: handle,
       message,
       filter,
+      default: defaultValue,
     };
   });
 

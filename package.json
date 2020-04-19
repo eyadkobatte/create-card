@@ -6,6 +6,9 @@
   "bin": {
     "create-personal-card": "index.js"
   },
+  "files": [
+    "card.js"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

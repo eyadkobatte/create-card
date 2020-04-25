@@ -7,6 +7,8 @@ const { exec } = require('child_process');
 const replace = require('replace-in-file');
 const inquirer = require('inquirer');
 
+const cardFunction = require('./card');
+
 const askBaseQuestions = async () => {
   const baseQuestions = [
     {
@@ -158,7 +160,8 @@ const init = async () => {
     const handleAnswers = await askHandleQuestions(baseAnswers);
     // console.log({ handleAnswers });
     await createProject();
-    fs.copyFileSync('card.js', './personal-card/index.js');
+    fs.writeFileSync('./personal-card/index.js', cardFunction);
+    // fs.copyFileSync('card.js', './personal-card/index.js');
     const results = await updateCardFunction({
       FULL_NAME: baseAnswers.name,
       ALIAS: baseAnswers.alias,

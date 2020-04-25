@@ -1,6 +1,6 @@
 {
   "name": "create-personal-card",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Create a card that displays information in terminal output",
   "main": "index.js",
   "bin": {

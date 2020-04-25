@@ -160,7 +160,7 @@ const init = async () => {
     const handleAnswers = await askHandleQuestions(baseAnswers);
     // console.log({ handleAnswers });
     await createProject();
-    fs.writeFileSync('./personal-card/index.js', cardFunction);
+    fs.writeFileSync('./personal-card/index.js', JSON.stringify(cardFunction));
     // fs.copyFileSync('card.js', './personal-card/index.js');
     const results = await updateCardFunction({
       FULL_NAME: baseAnswers.name,
